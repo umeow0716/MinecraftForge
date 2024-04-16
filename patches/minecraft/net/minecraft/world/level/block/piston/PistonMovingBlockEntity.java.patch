@@ -9,3 +9,12 @@
              Iterator iterator = list.iterator();
  
              while(true) {
+@@ -280,7 +_,7 @@
+             if (p_155916_.m_8055_(p_155917_).m_60713_(Blocks.f_50110_)) {
+                BlockState blockstate = Block.m_49931_(p_155919_.f_60334_, p_155916_, p_155917_);
+                if (blockstate.m_60795_()) {
+-                  p_155916_.m_7731_(p_155917_, p_155919_.f_60334_, 84);
++                  p_155916_.m_7731_(p_155917_, p_155919_.f_60334_, (84 | Block.f_152394_));
+                   Block.m_49902_(p_155919_.f_60334_, blockstate, p_155916_, p_155917_, 3);
+                } else {
+                   if (blockstate.m_61138_(BlockStateProperties.f_61362_) && blockstate.m_61143_(BlockStateProperties.f_61362_)) {

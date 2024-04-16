@@ -24,6 +24,27 @@
        return true;
     }
  
+@@ -296,13 +_,17 @@
+          }
+ 
+          for(int l = list.size() - 1; l >= 0; --l) {
+-            BlockPos blockpos3 = list.get(l);
+-            BlockState blockstate5 = p_60182_.m_8055_(blockpos3);
++            BlockPos blockpos3 = (BlockPos) list.get(l);
++            BlockPos oldPos = (BlockPos) list.get(l);
++            BlockState blockstate5 = null;
+             blockpos3 = blockpos3.m_142300_(direction);
+             map.remove(blockpos3);
+             BlockState blockstate8 = Blocks.f_50110_.m_49966_().m_61124_(f_52588_, p_60184_);
+             p_60182_.m_7731_(blockpos3, blockstate8, 68);
+-            p_60182_.m_151523_(MovingPistonBlock.m_155881_(blockpos3, blockstate8, list1.get(l), p_60184_, p_60185_, false));
++            blockstate5 = p_60182_.m_8055_(oldPos);
++            map.replace(oldPos, blockstate5);
++            p_60182_.m_151523_(MovingPistonBlock.m_155881_(blockpos3, blockstate8, blockstate5, p_60184_, p_60185_, false));
++            p_60182_.m_7731_(oldPos, Blocks.f_50016_.m_49966_(), Block.f_152394_ | Block.f_152397_ | Block.f_152399_ | 1024);
+             ablockstate[j++] = blockstate5;
+          }
+ 
 @@ -352,6 +_,10 @@
  
     public BlockState m_6843_(BlockState p_60215_, Rotation p_60216_) {
