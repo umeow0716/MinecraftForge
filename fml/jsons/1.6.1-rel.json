@@ -20,7 +20,7 @@
     "libraries": [
       {
         "name": "cpw.mods:fml:@version@",
-        "url": "http://files.minecraftforge.net/maven/"
+        "url": "https://maven.minecraftforge.net/"
       },
       {
         "name": "net.minecraft:launchwrapper:1.3",
